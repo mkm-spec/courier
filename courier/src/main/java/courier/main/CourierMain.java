@@ -14,9 +14,16 @@ public class CourierMain {
 
 	private static void callingMenuOptions(DAO dao) {
 		
-		switch(ReadData.readData()) {
+		int options = -1;
+		try {
+			options = Integer.valueOf(ReadData.readData());
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
-		case "Enter customer Details":
+		switch(options) {
+		
+		case 0:
 			//dao.saveCustomer(customer);
 		}
 		
